@@ -1,0 +1,152 @@
+.container-card{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5rem;
+}
+
+.text-card{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-card h2{
+    font-size: 2.75rem;
+}
+
+.text-card p{
+    width: 25vw;
+}
+
+.box-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    gap: 20px;
+    align-items: stretch;
+    position: relative;
+    margin-top: 2rem;
+    padding: 0 10vw;
+}
+
+.star-menu{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    gap: 5px;
+    padding: 0 10vw;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #00000028;
+    border-radius: 5px;
+}
+
+.card img {
+    object-fit: cover;
+    width: 100%;
+    height: 50%;
+}
+
+.text-des {
+    width: 100%;
+    height: 50%;
+}
+
+.text-des header {
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text-des header , .text-des footer {
+    padding: 0 .5rem;
+}
+
+.text-des header h2 {
+    font-size: 1rem;
+}
+
+.text-des footer {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: start;
+}
+
+.text-des footer small {
+    font-size: .8rem;
+}
+
+
+#star-top{
+    color: gold;
+}
+
+#star{
+    color: gold;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+@media (orientation: portrait) {
+
+    @media (min-width: 320px) and (max-width: 390px)
+    {
+        .box-card {
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        }
+
+        #star{
+            color: gold;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+
+        .text-card p{
+            width: 30vw;
+        }
+    }
+
+    @media (min-width: 391px) and (max-width: 768px)
+    {
+        .box-card {
+            padding: 0 5rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        .star-menu{
+            padding: 0 5rem;
+        }
+
+        #star{
+            color: gold;
+            position: absolute;
+            bottom: 5px;
+            left: 5px;
+        }
+    }
+    /* ,
+    (min-width: 391px) and (max-width: 768px),
+    (min-width: 768px) and (max-width: 820px),
+    (min-width: 820px) and (max-width: 1024px) */
+}
